@@ -11,7 +11,6 @@ import matplotlib.pyplot as plt
 import PIL.Image
 #from scipy import *
 import scipy.misc, scipy.optimize, scipy.io, scipy.special
-import pandas
 
 
 
@@ -112,10 +111,10 @@ def oneVsAll(X, y, number_classes, lamda):
         print("%d Cost: %.10f" % (k + 1, cost))
 
     print('Done\n')
-    return all_thetas,all_costs
+    return all_thetas, all_costs
 
 
-def oneVsAllOptimized(X, y, number_classes, lamda):
+def oneVsAllOptimized(X, y , number_classes, lamda):
     m, n = X.shape
     # Add a column of ones to x
     X = np.concatenate((np.ones((m, 1)), X), axis=1)
@@ -155,7 +154,7 @@ def TestCostFunction():
     theta_t =np.array([[-2], [-1], [1], [2]])
     #X_t = [np.ones(5, 1).reshape(1:15, 5, 3) / 10]
     X_t = buildTestData()
-    y_t =  np.array([[1] ,[0], [1], [0] ,[1]])
+    y_t =  np.array([[1], [0], [1], [0], [1]])
     #y_t = ([1;0;1;0;1] >= 0.5)
 
     lambda_t = 3
@@ -210,7 +209,7 @@ if __name__ == '__main__':
     y = data['y']
 
     # =========== Part 1: Loading and Visualizing Data =============
-    #displayData(X)
+    displayData(X)
 
     # ============ Part 2a: Vectorize Logistic Regression ============
     TestCostFunction()
