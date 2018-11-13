@@ -1,25 +1,12 @@
 # Machine Learning Online Class
 # Exercise 4 Neural Network Learning
 
-
-
-# import math
-# import os
-# import numpy as np
-# import matplotlib.pyplot as plt
-# import random
-# import PIL.Image
-# #from scipy import *
-# import scipy.misc, scipy.optimize, scipy.io, scipy.special
-
-
 import scipy.io
 import scipy.misc
 import scipy.optimize
 import scipy.special
 import matplotlib.pyplot as plt
 import numpy as np
-import random
 
 
 
@@ -278,7 +265,7 @@ if __name__  == '__main__':
     y = data['y']
 
     # ==================== Part 1: Basic Function ====================
-    #displayData(X)
+    displayData(X)
 
     # ================ Part 2: Loading Parameters ================
     data_with_weights = loaddata('ex4weights.mat', op=2)
